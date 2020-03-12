@@ -1,0 +1,6 @@
+framework module Pods_GHUser {
+  umbrella header "Pods-GHUser-umbrella.h"
+
+  export *
+  module * { export * }
+}

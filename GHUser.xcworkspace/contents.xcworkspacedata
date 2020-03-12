@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CommonViper/CommonViper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ApiV1/ApiV1.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GHUser/GHUser.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
