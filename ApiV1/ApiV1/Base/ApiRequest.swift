@@ -39,13 +39,14 @@ class ApiRequest<P: Encodable, R: Codable> {
         dataRequest = AF.request(urlRequestString,
                                  method: method,
                                  parameters: params,
-                                 encoder: JSONParameterEncoder.default,
                                  headers: headers)
         
-        dataRequest?.responseDecodable(of: R.self) { [weak self] response in
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        dataRequest?.responseDecodable(of: R.self, decoder: decoder) { [weak self] response in
             switch response.result {
             case .success(let result):
-                self?.onSuccess?(result)
+                self?.sukses(r: result)
             case .failure(let err):
                 if err.isInvalidURLError {
                     self?.onFailure?(ApiError.unsupportedURL)
@@ -59,5 +60,9 @@ class ApiRequest<P: Encodable, R: Codable> {
     
     func cancel() {
         dataRequest?.cancel()
+    }
+    
+    private func sukses(r: R) {
+        onSuccess?(r)
     }
 }

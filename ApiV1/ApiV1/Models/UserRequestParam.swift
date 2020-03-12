@@ -10,4 +10,8 @@ import Foundation
 
 public struct UserRequestParam: Encodable {
     public var since: Int
+    
+    public init(_ since: Int) {
+        self.since = since
+    }
 }

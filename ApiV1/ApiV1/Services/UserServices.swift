@@ -19,6 +19,7 @@ public protocol UserServicesInterface {
 
 public class UserServices: UserServicesInterface {
     
+    private var req: ApiRequest<UserRequestParam, [PublicUser]>?
     
     public init() { }
     
@@ -26,18 +27,22 @@ public class UserServices: UserServicesInterface {
                            cancel: ((@escaping () -> Void) -> Void)?,
                            onSuccess: (([PublicUser]) -> Void)?,
                            onFailure: ((ApiError) -> Void)?) {
-        let path: String = "users"
+        let path: String = "/users"
         let headers = HTTPHeadersBuilder().defaultValue
         
-        let req = ApiRequest(path: path,
-                             headers: headers,
-                             method: .get,
-                             params: params,
-                             onSuccess: onSuccess,
-                             onFailure: onFailure)
-        req.call()
-        cancel? {
-            req.cancel()
+        req = ApiRequest(path: path,
+                         headers: headers,
+                         method: .get,
+                         params: params,
+                         onSuccess: { r in
+                            onSuccess?(r)
+                        },
+                         onFailure: { er in
+                            onFailure?(er)
+                        })
+        req?.call()
+        cancel? { [weak self] in
+            self?.req?.cancel()
         }
         
     }

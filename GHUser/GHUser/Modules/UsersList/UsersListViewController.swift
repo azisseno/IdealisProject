@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import ApiV1
 
 final class UsersListViewController: UIViewController {
 
@@ -37,6 +38,7 @@ final class UsersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _setupView()
+        _presenter.viewDidLoad(since: 0)
     }
 	
     // MARK: - Setup Initial View
@@ -44,8 +46,17 @@ final class UsersListViewController: UIViewController {
         // Write your initial setup here
     }
 
+    // Properties:
+    
 }
 
 // MARK: - Extensions -
 extension UsersListViewController: UsersListViewInterface {
+    func showError(message: String) {
+        print(message)
+    }
+    
+    func showUsers(users: [PublicUser]) {
+        print(users)
+    }
 }

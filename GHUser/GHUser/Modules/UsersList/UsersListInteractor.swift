@@ -23,7 +23,11 @@ final class UsersListInteractor {
 
 // MARK: - Extensions -
 extension UsersListInteractor: UsersListInteractorInterface {
-    func fetchUser(completion: @escaping ([PublicUser]) -> Void) {
+    func fetchUser(since: Int, onSuccess: @escaping ([PublicUser]) -> Void, onFailure: @escaping (ApiError) -> Void) {
+        userServices.fetchUsers(params: UserRequestParam(since),
+                                cancel: nil,
+                                onSuccess: onSuccess,
+                                onFailure: onFailure)
 
     }
 }

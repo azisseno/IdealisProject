@@ -22,15 +22,19 @@ protocol UsersListRouterInterface: class {
 }
 
 protocol UsersListViewInterface: class {
-    
+    func showUsers(users: [PublicUser])
+    func showError(message: String)
 }
 
 protocol UsersListPresenterInterface: class {
     init(interactor: UsersListInteractorInterface, router: UsersListRouterInterface)
     func setView(_ view: UsersListViewInterface)
+    func viewDidLoad(since: Int)
 }
 
 protocol UsersListInteractorInterface: class {
     init(userServices: UserServicesInterface)
-    func fetchUser(completion: @escaping ([PublicUser]) -> Void)
+    func fetchUser(since: Int,
+                   onSuccess: @escaping ([PublicUser]) -> Void,
+                   onFailure: @escaping (ApiError) -> Void)
 }

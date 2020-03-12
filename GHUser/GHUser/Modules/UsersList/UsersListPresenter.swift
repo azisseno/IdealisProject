@@ -29,7 +29,18 @@ final class UsersListPresenter {
 
 // MARK: - Extensions -
 extension UsersListPresenter: UsersListPresenterInterface {
-        
+    func viewDidLoad(since: Int) {
+        _interactor.fetchUser(
+            since: since,
+            onSuccess: { [weak self] users in
+                self?._view?.showUsers(users: users)
+            },
+            onFailure: { [weak self] err in
+                self?._view?.showError(message: err.localizedDescription)
+            }
+        )
+    }
+
     func setView(_ view: UsersListViewInterface) {
         _view = view
     }
