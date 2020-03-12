@@ -12,7 +12,7 @@
 import UIKit
 import ApiV1
 
-final class UsersListViewController: UIViewController {
+final class UsersListViewController: UITableViewController {
 
     // MARK: - Default properties -
     private var _presenter: UsersListPresenterInterface!
@@ -34,6 +34,9 @@ final class UsersListViewController: UIViewController {
         fatalError("(coder: NSCoder) has not been implemented")
     }
     
+    var imageCache = NSCache<NSString, UIImage>()
+    var users: [PublicUser] = []
+    
     // MARK: - View Controller Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +49,20 @@ final class UsersListViewController: UIViewController {
         // Write your initial setup here
     }
 
-    // Properties:
+    // TableView Datasource:
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ImageTextTableViewCell = tableView.cell(indexPath: indexPath)
+        cell.setup(image: UIImage(), labelText: "")
+        return cell
+    }
     
 }
 
@@ -57,6 +73,8 @@ extension UsersListViewController: UsersListViewInterface {
     }
     
     func showUsers(users: [PublicUser]) {
-        print(users)
+        self.users = users
+        tableView.reloadData()
+        
     }
 }

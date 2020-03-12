@@ -25,6 +25,11 @@
 		844EEE172417DACE00E27A29 /* GHUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE162417DACE00E27A29 /* GHUserTests.swift */; };
 		8483F9E2241A0299001003C6 /* ApiV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8483F9E1241A0299001003C6 /* ApiV1.framework */; };
 		8483F9E3241A0299001003C6 /* ApiV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8483F9E1241A0299001003C6 /* ApiV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8483F9EC241A5D77001003C6 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483F9EB241A5D77001003C6 /* UITableView.swift */; };
+		8483F9F0241A5E80001003C6 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483F9EF241A5E80001003C6 /* ImageTextView.swift */; };
+		8483F9F2241A5EB5001003C6 /* ImageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8483F9F1241A5EB5001003C6 /* ImageTextView.xib */; };
+		8483F9F7241A644C001003C6 /* ImageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483F9F6241A644C001003C6 /* ImageTextTableViewCell.swift */; };
+		8483F9F9241A6499001003C6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483F9F8241A6499001003C6 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		844EEE162417DACE00E27A29 /* GHUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserTests.swift; sourceTree = "<group>"; };
 		844EEE182417DACE00E27A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8483F9E1241A0299001003C6 /* ApiV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8483F9EB241A5D77001003C6 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		8483F9EF241A5E80001003C6 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		8483F9F1241A5EB5001003C6 /* ImageTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTextView.xib; sourceTree = "<group>"; };
+		8483F9F6241A644C001003C6 /* ImageTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextTableViewCell.swift; sourceTree = "<group>"; };
+		8483F9F8241A6499001003C6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,8 @@
 		844EEDFB2417DACC00E27A29 /* GHUser */ = {
 			isa = PBXGroup;
 			children = (
+				8483F9ED241A5E54001003C6 /* Views */,
+				8483F9EA241A5D6A001003C6 /* Common */,
 				843A7C962419DA0D00652E19 /* Modules */,
 				844EEDFC2417DACC00E27A29 /* AppDelegate.swift */,
 				844EEDFE2417DACC00E27A29 /* SceneDelegate.swift */,
@@ -181,6 +193,33 @@
 				844EEE182417DACE00E27A29 /* Info.plist */,
 			);
 			path = GHUserTests;
+			sourceTree = "<group>";
+		};
+		8483F9EA241A5D6A001003C6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8483F9EB241A5D77001003C6 /* UITableView.swift */,
+				8483F9F8241A6499001003C6 /* UIView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8483F9ED241A5E54001003C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8483F9EE241A5E5C001003C6 /* BasicViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8483F9EE241A5E5C001003C6 /* BasicViews */ = {
+			isa = PBXGroup;
+			children = (
+				8483F9EF241A5E80001003C6 /* ImageTextView.swift */,
+				8483F9F1241A5EB5001003C6 /* ImageTextView.xib */,
+				8483F9F6241A644C001003C6 /* ImageTextTableViewCell.swift */,
+			);
+			path = BasicViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +310,7 @@
 				843A7C9F2419DADF00652E19 /* UsersList.storyboard in Resources */,
 				844EEE092417DACE00E27A29 /* Assets.xcassets in Resources */,
 				844EEE042417DACC00E27A29 /* Main.storyboard in Resources */,
+				8483F9F2241A5EB5001003C6 /* ImageTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,13 +370,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8483F9F7241A644C001003C6 /* ImageTextTableViewCell.swift in Sources */,
 				843A7CA02419DADF00652E19 /* UsersListInterfaces.swift in Sources */,
 				844EEE012417DACC00E27A29 /* ViewController.swift in Sources */,
+				8483F9F0241A5E80001003C6 /* ImageTextView.swift in Sources */,
 				844EEE072417DACC00E27A29 /* GHUser.xcdatamodeld in Sources */,
 				843A7CA52419DADF00652E19 /* UsersListInteractor.swift in Sources */,
 				843A7CA22419DADF00652E19 /* UsersListRouter.swift in Sources */,
+				8483F9EC241A5D77001003C6 /* UITableView.swift in Sources */,
 				843A7CA42419DADF00652E19 /* UsersListBuilder.swift in Sources */,
 				843A7CA12419DADF00652E19 /* UsersListPresenter.swift in Sources */,
+				8483F9F9241A6499001003C6 /* UIView.swift in Sources */,
 				843A7CA32419DADF00652E19 /* UsersListViewController.swift in Sources */,
 				844EEDFD2417DACC00E27A29 /* AppDelegate.swift in Sources */,
 				844EEDFF2417DACC00E27A29 /* SceneDelegate.swift in Sources */,
