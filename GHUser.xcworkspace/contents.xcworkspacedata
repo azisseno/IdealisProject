@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CommonViper/CommonViper.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:ApiV1/ApiV1.xcodeproj">
    </FileRef>
    <FileRef

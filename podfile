@@ -1,15 +1,21 @@
 
 workspace 'GHUser'
+use_frameworks!
+
+def common 
+  pod 'Alamofire', '~> 5.0'
+end
 
 target 'GHUser' do
 project 'GHUser/GHUser.xcodeproj'
-  use_frameworks!
- 
+  
+  common
 end
 
 target 'ApiV1' do
 project 'ApiV1/ApiV1.xcodeproj'
-  use_frameworks!
- 
-  pod 'Alamofire', '~> 5.0'
+
+  common
+  target 'ApiV1Tests'
+
 end

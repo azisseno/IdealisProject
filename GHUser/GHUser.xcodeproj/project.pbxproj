@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		38115718A06DADC73809E560 /* Pods_GHUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DB02A62C1ECB268055F70B /* Pods_GHUser.framework */; };
+		843A7C9F2419DADF00652E19 /* UsersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843A7C982419DADF00652E19 /* UsersList.storyboard */; };
+		843A7CA02419DADF00652E19 /* UsersListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C992419DADF00652E19 /* UsersListInterfaces.swift */; };
+		843A7CA12419DADF00652E19 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C9A2419DADF00652E19 /* UsersListPresenter.swift */; };
+		843A7CA22419DADF00652E19 /* UsersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C9B2419DADF00652E19 /* UsersListRouter.swift */; };
+		843A7CA32419DADF00652E19 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C9C2419DADF00652E19 /* UsersListViewController.swift */; };
+		843A7CA42419DADF00652E19 /* UsersListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C9D2419DADF00652E19 /* UsersListBuilder.swift */; };
+		843A7CA52419DADF00652E19 /* UsersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A7C9E2419DADF00652E19 /* UsersListInteractor.swift */; };
 		844EEDFD2417DACC00E27A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEDFC2417DACC00E27A29 /* AppDelegate.swift */; };
 		844EEDFF2417DACC00E27A29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEDFE2417DACC00E27A29 /* SceneDelegate.swift */; };
 		844EEE012417DACC00E27A29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE002417DACC00E27A29 /* ViewController.swift */; };
@@ -16,6 +23,8 @@
 		844EEE092417DACE00E27A29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844EEE082417DACE00E27A29 /* Assets.xcassets */; };
 		844EEE0C2417DACE00E27A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844EEE0A2417DACE00E27A29 /* LaunchScreen.storyboard */; };
 		844EEE172417DACE00E27A29 /* GHUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EEE162417DACE00E27A29 /* GHUserTests.swift */; };
+		8483F9E2241A0299001003C6 /* ApiV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8483F9E1241A0299001003C6 /* ApiV1.framework */; };
+		8483F9E3241A0299001003C6 /* ApiV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8483F9E1241A0299001003C6 /* ApiV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8483F9E3241A0299001003C6 /* ApiV1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +55,13 @@
 		477EE9E54955DF0AFD7BBB3F /* Pods-GHUser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHUser.release.xcconfig"; path = "Target Support Files/Pods-GHUser/Pods-GHUser.release.xcconfig"; sourceTree = "<group>"; };
 		79DB02A62C1ECB268055F70B /* Pods_GHUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6B02CEB05D269C11A505DB /* Pods-GHUser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHUser.debug.xcconfig"; path = "Target Support Files/Pods-GHUser/Pods-GHUser.debug.xcconfig"; sourceTree = "<group>"; };
+		843A7C982419DADF00652E19 /* UsersList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersList.storyboard; sourceTree = "<group>"; };
+		843A7C992419DADF00652E19 /* UsersListInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListInterfaces.swift; sourceTree = "<group>"; };
+		843A7C9A2419DADF00652E19 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
+		843A7C9B2419DADF00652E19 /* UsersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListRouter.swift; sourceTree = "<group>"; };
+		843A7C9C2419DADF00652E19 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		843A7C9D2419DADF00652E19 /* UsersListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListBuilder.swift; sourceTree = "<group>"; };
+		843A7C9E2419DADF00652E19 /* UsersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListInteractor.swift; sourceTree = "<group>"; };
 		844EEDF92417DACC00E27A29 /* GHUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844EEDFC2417DACC00E27A29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844EEDFE2417DACC00E27A29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +74,7 @@
 		844EEE122417DACE00E27A29 /* GHUserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHUserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844EEE162417DACE00E27A29 /* GHUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserTests.swift; sourceTree = "<group>"; };
 		844EEE182417DACE00E27A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8483F9E1241A0299001003C6 /* ApiV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8483F9E2241A0299001003C6 /* ApiV1.framework in Frameworks */,
 				38115718A06DADC73809E560 /* Pods_GHUser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,9 +110,32 @@
 		752DB550E86AF3DFFF81A2ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8483F9E1241A0299001003C6 /* ApiV1.framework */,
 				79DB02A62C1ECB268055F70B /* Pods_GHUser.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		843A7C962419DA0D00652E19 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				843A7C972419DA1100652E19 /* UsersList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		843A7C972419DA1100652E19 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				843A7C982419DADF00652E19 /* UsersList.storyboard */,
+				843A7C9D2419DADF00652E19 /* UsersListBuilder.swift */,
+				843A7C992419DADF00652E19 /* UsersListInterfaces.swift */,
+				843A7C9A2419DADF00652E19 /* UsersListPresenter.swift */,
+				843A7C9B2419DADF00652E19 /* UsersListRouter.swift */,
+				843A7C9C2419DADF00652E19 /* UsersListViewController.swift */,
+				843A7C9E2419DADF00652E19 /* UsersListInteractor.swift */,
+			);
+			path = UsersList;
 			sourceTree = "<group>";
 		};
 		844EEDF02417DACC00E27A29 = {
@@ -119,6 +161,7 @@
 		844EEDFB2417DACC00E27A29 /* GHUser */ = {
 			isa = PBXGroup;
 			children = (
+				843A7C962419DA0D00652E19 /* Modules */,
 				844EEDFC2417DACC00E27A29 /* AppDelegate.swift */,
 				844EEDFE2417DACC00E27A29 /* SceneDelegate.swift */,
 				844EEE002417DACC00E27A29 /* ViewController.swift */,
@@ -152,6 +195,7 @@
 				844EEDF62417DACC00E27A29 /* Frameworks */,
 				844EEDF72417DACC00E27A29 /* Resources */,
 				844EEE3D2417DB7200E27A29 /* Embed Frameworks */,
+				65CE8B59FAA74EC6A1E3BF3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844EEE0C2417DACE00E27A29 /* LaunchScreen.storyboard in Resources */,
+				843A7C9F2419DADF00652E19 /* UsersList.storyboard in Resources */,
 				844EEE092417DACE00E27A29 /* Assets.xcassets in Resources */,
 				844EEE042417DACC00E27A29 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +284,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		65CE8B59FAA74EC6A1E3BF3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GHUser/Pods-GHUser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GHUser/Pods-GHUser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GHUser/Pods-GHUser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E65939417D4E861E2924118F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,8 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843A7CA02419DADF00652E19 /* UsersListInterfaces.swift in Sources */,
 				844EEE012417DACC00E27A29 /* ViewController.swift in Sources */,
 				844EEE072417DACC00E27A29 /* GHUser.xcdatamodeld in Sources */,
+				843A7CA52419DADF00652E19 /* UsersListInteractor.swift in Sources */,
+				843A7CA22419DADF00652E19 /* UsersListRouter.swift in Sources */,
+				843A7CA42419DADF00652E19 /* UsersListBuilder.swift in Sources */,
+				843A7CA12419DADF00652E19 /* UsersListPresenter.swift in Sources */,
+				843A7CA32419DADF00652E19 /* UsersListViewController.swift in Sources */,
 				844EEDFD2417DACC00E27A29 /* AppDelegate.swift in Sources */,
 				844EEDFF2417DACC00E27A29 /* SceneDelegate.swift in Sources */,
 			);
